@@ -30,14 +30,13 @@ export function upload(apiUrl, part, files, {success, error}) {
 }
 
 
-export function load(apiUrl, part, {success, error}) {
+export function load(apiUrl, {success, error}) {
     reqwest({
-        url: apiUrl + part,
+        url: apiUrl,
         method: 'get',
         contentType: 'application/json',
-        crossOrigin: true,
         withCredentials: true,
-        type: 'json',
+        type: 'jsonp',
     }).then((r) => {
         success(r);
     }, (err, msg) => {
