@@ -16,8 +16,10 @@
   "license": "ISC",
   "main": "src/index",
   "dependencies": {
-    "react": "^15.4.2",    
-    "react-dom": "^15.4.2"
+    "fluxxor": "^1.7.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-google-maps": "^6.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

@@ -2,10 +2,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from 'app.jsx';
+import flux from 'app/flux';
  
+
+const flx = flux();
+
 render(
+
   <AppContainer>
-      <App/>
+      <App flux={flx}/>
   </AppContainer>,
   document.querySelector("#app")
 );
@@ -15,7 +20,7 @@ if (module && module.hot) {
     const App = require('./app.jsx').default;
     render(
       <AppContainer>
-            <App/>
+            <App flux={flx}/>
       </AppContainer>,
       document.querySelector("#app")
     );
