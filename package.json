@@ -18,9 +18,11 @@
   "dependencies": {
     "babel-core": "^6.21.0",
     "fluxxor": "^1.7.3",
+    "google-map-react": "^0.22.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-google-maps": "^6.0.1",
+    "react-pure-render": "^1.0.2",
     "reqwest": "^2.0.5"
   },
   "devDependencies": {
