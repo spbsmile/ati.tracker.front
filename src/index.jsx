@@ -18,6 +18,7 @@ render(
 if (module && module.hot) {
   module.hot.accept('./app.jsx', () => {
     const App = require('./app.jsx').default;
+    const flx = flux();
     render(
       <AppContainer>
             <App flux={flx}/>

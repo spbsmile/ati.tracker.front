@@ -13,7 +13,7 @@ function flxInit() {
 
     };
 
-    let flux = new fluxxor.Flux(storeInstances, actions);
+    let flux = new fluxxor.Flux(storeInstances, actions("settings"));
 
     flux.setDispatchInterceptor(function (action, dispatch) {
         ReactDOM.unstable_batchedUpdates(function () {
