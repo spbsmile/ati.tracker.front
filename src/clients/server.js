@@ -1,4 +1,4 @@
-var reqwest = (FRONTEND) ? require('reqwest') : function() {};
+import reqwest from 'reqwest';
 
 export function save(apiUrl, part, obj, {success, error}) {
     reqwest({
