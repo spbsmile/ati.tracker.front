@@ -10,7 +10,7 @@ function flxInit() {
         return _flux;
 
     let storeInstances = {
-
+        map : new stores.Map()
     };
 
     let flux = new fluxxor.Flux(storeInstances, actions("settings"));

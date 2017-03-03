@@ -3,15 +3,16 @@ import Fluxxor from 'fluxxor';
 let FluxMixin = Fluxxor.FluxMixin(React);
 let storeWatch = Fluxxor.StoreWatchMixin;
 import styles from './style.css';
-
-import shouldPureComponentUpdate from 'react-pure-render/function';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
 
 
 let map = React.createClass({
 
-    mixins: [FluxMixin],
+    mixins: [FluxMixin,
+        storeWatch('map'),
+        PureRenderMixin],
 
     getInitialState: function () {
         return {};
@@ -19,6 +20,7 @@ let map = React.createClass({
 
     getStateFromFlux: function () {
         var flux = this.getFlux();
+        return flux.store('map').getState();
     },
 
     clickButton() {
@@ -34,7 +36,7 @@ let map = React.createClass({
                     center={center}
                     zoom={9}>
                 </GoogleMap>
-                <button onClick={this.clickButton}>    </button>
+                <button onClick={this.clickButton}>  Получить по клику координаты в стор map и в консоль  </button>
             </div>);
     },
 });
