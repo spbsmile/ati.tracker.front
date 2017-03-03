@@ -1,0 +1,1 @@
+export const url_path_get_points = 'http://ati.prog-pc32:9999/getPoints/thisisloadid';
