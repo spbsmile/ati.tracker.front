@@ -17,9 +17,9 @@ export default function methods(settings) {
         },
         road:{
             initial: function(){
-                client.Road.start({
+                clients.Road.start('http://ati.prog-pc32:9999/getRide/thisisloadid',{
                     success: (e) => {
-                        this.dispatch(constants.START_ROAD, e);
+                        this.dispatch(constants.START_ROAD_LOADED, e);
                     },
                     error: () => this.dispatch(constants.START_ROAD_FAILED),
                 })

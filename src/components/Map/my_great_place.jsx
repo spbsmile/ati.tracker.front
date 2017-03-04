@@ -5,7 +5,8 @@ import {greatPlaceStyle} from './my_great_place_styles.js';
 
 export default class MyGreatPlace extends Component {
   static propTypes = {
-    text: PropTypes.string
+    text: PropTypes.string,
+    style: PropTypes.string
   };
 
   static defaultProps = {};
@@ -14,7 +15,7 @@ export default class MyGreatPlace extends Component {
 
   render() {
     return (
-       <div style={greatPlaceStyle}>
+       <div style={this.props.style}>
           {this.props.text}
        </div>
     );

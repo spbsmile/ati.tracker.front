@@ -9,8 +9,8 @@ let road = Fluxxor.createStore({
             );
     },
 
-    initialRoad: function (start_point, end_point){
-         this.setProps({ 'start_point': start_point, 'end_point': end_point});
+    initialRoad: function (e){
+         this.setProps({ 'start_point': e.startPoint, 'end_point': e.endPoint});
     },
 
     setProps(obj) {
