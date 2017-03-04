@@ -7,7 +7,6 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
 
-
 let map = React.createClass({
 
     mixins: [FluxMixin,
@@ -15,6 +14,7 @@ let map = React.createClass({
         PureRenderMixin],
 
     getInitialState: function () {
+        this.getFlux().actions.load.get();
         return {};
     },
 
@@ -23,20 +23,28 @@ let map = React.createClass({
         return flux.store('map').getState();
     },
 
-    clickButton() {
-        this.getFlux().actions.load.get();
+    showPoints() {
+        let loadPoints = [];
+        const points = this.state.points;
+        if (points) {
+            for (var i = 0; i < points.length; i++) {
+                var point = points[i];
+                loadPoints.push(<MyGreatPlace lat={point.lat} lng={point.lon} />);
+            }
+            return loadPoints;
+        }
     },
 
     render: function () {
+        const loadsPoint = this.showPoints();
         const center = [59.938043, 30.337157];
-        const greatPlaceCoords = { lat: 59.724465, lng: 30.080121 };
         return (
             <div className="frameGoogleMap">
                 <GoogleMap
                     center={center}
                     zoom={9}>
+                    {loadsPoint}
                 </GoogleMap>
-                <button onClick={this.clickButton}>  Получить по клику координаты в стор map и в консоль  </button>
             </div>);
     },
 });
