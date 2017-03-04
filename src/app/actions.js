@@ -2,7 +2,6 @@ import * as constants from 'app/constants';
 import * as clients from 'clients/';
 import * as settings from './settings';
 
-
 export default function methods(settings) {
     return {
         load: {

@@ -85,12 +85,22 @@ let map = React.createClass({
         roadPath.setMap(this.map.map_);
     },
 
+    getCenter() {
+        const road = this.state.road;
+
+        if (road && road.start_point && road.end_point) {
+            return [(road.start_point.lat + road.end_point.lat / 2), (road.start_point.lon + road.end_point.lon / 2)]
+        } else {
+            return [59.938043, 30.337157];
+        }
+    }
+
     render: function () {
         const loadsPoint = this.getWrapReachedPoints();
         const road = this.showRoadBound();
 
         const reachedPoints = this.state.points;
-        const center = [59.938043, 30.337157];
+        const center = getCenter();
         return (
             <div className="frameGoogleMap">
                 <GoogleMap

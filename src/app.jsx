@@ -12,7 +12,7 @@ const App = React.createClass({
   render() {
     return (
       <div className="app-container">
-        <div> Привет мир!! </div>
+        <div>ATI Tracker</div>
         <Map></Map>
         
 
