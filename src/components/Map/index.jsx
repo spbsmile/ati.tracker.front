@@ -7,6 +7,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
 import RoadPoint from './roadPoint.jsx';
+import PhotoPoint from './photoPoint.jsx';
 import TruckPoint from './truckPoint.jsx';
 
 let map = React.createClass({
@@ -44,7 +45,7 @@ let map = React.createClass({
             for (var i = 0; i < points.length; i++) {
                 var point = points[i];
                 if (point.photo) {
-                    loadPoints.push(<MyGreatPlace key={i} lat={point.lat} lng={point.lon} />);
+                    loadPoints.push(<PhotoPoint key={i} lat={point.lat} lng={point.lon} />);
                 }
 
                 if (point.time > time) {
