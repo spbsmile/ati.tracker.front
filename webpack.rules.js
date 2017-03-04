@@ -22,6 +22,11 @@ module.exports = [
 		loader: "url?limit=10000&mimetype=application/octet-stream"
 	},
 	{
+		test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+		exclude: /(node_modules|bower_components)/,
+		loader: "output.devtoolLineToLine"
+	},
+	{
 		test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
 		exclude: /(node_modules|bower_components)/,
 		loader: "url?limit=10000&mimetype=image/svg+xml"

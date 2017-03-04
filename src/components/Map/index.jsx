@@ -6,7 +6,8 @@ import styles from './style.css';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
-import RoadPoint from './road_point.js';
+import RoadPoint from './roadPoint.jsx';
+import TruckPoint from './truckPoint.jsx';
 
 let map = React.createClass({
 
@@ -28,13 +29,25 @@ let map = React.createClass({
 
     getWrapReachedPoints() {
         const points = this.state.map.points;
+
         if (points) {
+            var time = 0;
+            var truckPoint = null;
+
             let loadPoints = [];
             for (var i = 0; i < points.length; i++) {
-                if (points[i].photo) {
-                    var point = points[i];
+                var point = points[i];
+                if (point.photo) {
                     loadPoints.push(<MyGreatPlace key={i} lat={point.lat} lng={point.lon} />);
                 }
+
+                if (point.time > time) {
+                    truckPoint = point;
+                }
+            }
+
+            if (truckPoint) {
+                loadPoints.push(<TruckPoint key={i} lat={truckPoint.lat} lng={truckPoint.lon} />);
             }
             return loadPoints;
         }
@@ -42,9 +55,16 @@ let map = React.createClass({
 
     showRoadBound(){
         const road = this.state.road;
-        return [<MyGreatPlace key={"start_point"} lat={road.start_point.lat} lng={road.start_point.lon} />,
-        <MyGreatPlace key={"end_point"} lat={road.end_point.lat} lng={road.end_point.lon} />
-        ];
+        const points = this.state.map.points;
+
+        if (road && road.start_point && road.end_point) {
+            return [
+                <RoadPoint key={"start_point"} lat={road.start_point.lat} lng={road.start_point.lon} />,
+                <RoadPoint key={"end_point"} lat={road.end_point.lat} lng={road.end_point.lon} />
+            ];
+        } else {
+            return [];
+        }
     },
 
     mapLoaded() {
