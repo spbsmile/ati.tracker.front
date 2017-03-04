@@ -14,7 +14,7 @@ let map = React.createClass({
         PureRenderMixin],
 
     getInitialState: function () {
-        this.getFlux().actions.load.get();
+        this.getFlux().actions.load.getReachedPoints();
         return {};
     },
 
@@ -24,9 +24,9 @@ let map = React.createClass({
     },
 
     showPoints() {
-        let loadPoints = [];
         const points = this.state.points;
         if (points) {
+            let loadPoints = [];
             for (var i = 0; i < points.length; i++) {
                 var point = points[i];
                 loadPoints.push(<MyGreatPlace lat={point.lat} lng={point.lon} />);
