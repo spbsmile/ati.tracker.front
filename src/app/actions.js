@@ -6,7 +6,7 @@ export default function methods(settings) {
     return {
         load: {
             getReachedPoints: function () {
-                clients.Load.getPoints("http://ati.prog-pc32:9999/getPoints/thisisloadid", {
+                clients.Load.getPoints("http://ati.prog-pc32:9999/getPoints/" + constants.loadId, {
                     success: (e) => {
                         this.dispatch(constants.LOAD_PATH_LOADED, e);
                     },
@@ -16,7 +16,7 @@ export default function methods(settings) {
         },
         road:{
             initial: function(){
-                clients.Road.start('http://ati.prog-pc32:9999/getRide/thisisloadid',{
+                clients.Road.start('http://ati.prog-pc32:9999/getRide/' + constants.loadId,{
                     success: (e) => {
                         this.dispatch(constants.START_ROAD_LOADED, e);
                     },

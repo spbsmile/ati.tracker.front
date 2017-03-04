@@ -45,7 +45,7 @@ let map = React.createClass({
             for (var i = 0; i < points.length; i++) {
                 var point = points[i];
                 if (point.photo) {
-                    loadPoints.push(<PhotoPoint key={i} lat={point.lat} lng={point.lon} />);
+                    loadPoints.push(<PhotoPoint key={i} lat={point.lat} lng={point.lon} url={point.photo} />);
                 }
 
                 if (point.time > time) {
