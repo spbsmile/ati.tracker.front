@@ -15,7 +15,7 @@ export default class MyGreatPlace extends Component {
 
   render() {
     return (
-       <div style={this.props.style}>
+       <div style={greatPlaceStyle}>
           {this.props.text}
        </div>
     );
