@@ -1,0 +1,92 @@
+.panel{
+    width: 314px;
+    height: 47px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    background-color: var(--white);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.button{
+
+  width: 87px;
+  height: 21px;
+  border-radius: 20px;
+  background-color: #478cc8!important;
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.content{
+      float: left;
+      margin-left: 10px;
+    margin-top: 10px;
+    width: 147.5px;
+    height: 30px;
+  font-family: Roboto;
+  font-size: 7px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(6, 21, 35, 0.8);
+}
+
+.contentTitle{
+    font-weight: 700;
+}
+
+.textButton{
+     width: 87px;
+  height: 9.5px;
+  font-family: Lato;
+  font-size: 6px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.58;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff!important;
+  color: var(--white);
+}
+
+.right{
+      margin-right: 10px;
+  margin-top: 10px;
+  float: right;
+}
+
+.costTitle{
+        margin-left: 20px;
+     width: 52.5px;
+  height: 10px;
+  font-family: Roboto;
+  font-size: 6px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8c969d;
+  color: var(--darkgray);
+}
+
+.icon{
+    /*background: url("../../img/zeplinn_page_photo_control/svg/ic-car.svg");*/
+}
+
+.ic_car {
+    float: left;
+         margin-left: 10px;
+    margin-top: 10px;
+  width: 16px;
+  height: 13.5px;
+  object-fit: contain;
+  background-color: #e6ba4d !important;
+  background-color: var(--orange);
+}
+
