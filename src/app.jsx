@@ -3,7 +3,7 @@ import React from 'react';
 import Fluxxor from 'fluxxor';
 let FluxMixin = Fluxxor.FluxMixin(React);
 import Map from './components/Map';
-import RequestPhotoPanel from './components/RequestPhotoPanel';
+import TripInfoPanel from './components/TripInfoPanel';
 
 const App = React.createClass({
 
@@ -14,7 +14,7 @@ const App = React.createClass({
       <div className="app-container">
         <div>ATI Tracker</div>
         <Map></Map>
-        <RequestPhotoPanel/>
+        <TripInfoPanel/>
 
       </div>
     )

@@ -4,7 +4,7 @@ import styles from './style.css';
 
 let FluxMixin = Fluxxor.FluxMixin(React);
 
-let requestPhotoPanel = React.createClass({
+let tripInfoPanel = React.createClass({
 
     requestPhotoClick() {
         console.log("hello requestPhotoClick");
@@ -16,6 +16,10 @@ let requestPhotoPanel = React.createClass({
             <span>{"Крапивин Ильсур Болгарович +79814424524"}</span> <br />
             <span>{"Мороженные помидоры 16т., насыпью"}</span>
         </div>;
+    },
+
+    rightWidget(){
+        
     },
 
     render: function () {
@@ -35,4 +39,4 @@ let requestPhotoPanel = React.createClass({
     },
 });
 
-export default requestPhotoPanel;
+export default tripInfoPanel;
