@@ -11,7 +11,8 @@ function flxInit() {
 
     let storeInstances = {
         map : new stores.Map(),
-        road: new stores.Road()
+        road: new stores.Road(),
+        tripInfoPanel: new stores.TripInfoPanel()
     };
 
     let flux = new fluxxor.Flux(storeInstances, actions("settings"));

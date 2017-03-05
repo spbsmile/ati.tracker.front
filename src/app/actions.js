@@ -23,6 +23,23 @@ export default function methods(settings) {
                     error: () => this.dispatch(constants.START_ROAD_FAILED),
                 })
             }
+        },
+        tripInfoPanel:{
+            initial: function(){
+                //  this.dispatch(constants.PHOTO_REQUEST, e);
+            },
+            reqPhoto:function(){
+                 this.dispatch(constants.PHOTO_REQUEST);
+                //  clients.Photo.reqPhoto('http://ati.prog-pc32:9999/requestPhoto/'+ constants.loadId,{
+                //     success: (e) => {
+                //         this.dispatch(constants.PHOTO_REQUEST, e);
+                //     },
+                //     error: () => this.dispatch(constants.PHOTO_REQUEST_FAILED),
+                // })
+            },
+            responsePhoto:function(){
+                this.dispatch(constants.PHOTO_RESPONSE);
+            }
         }
     }
 }
