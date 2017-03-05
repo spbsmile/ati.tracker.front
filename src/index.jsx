@@ -8,7 +8,6 @@ import flux from 'app/flux';
 const flx = flux();
 
 render(
-
   <AppContainer>
       <App flux={flx}/>
   </AppContainer>,
