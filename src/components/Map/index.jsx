@@ -78,10 +78,10 @@ let map = React.createClass({
     mapLoaded() {
         const reachedPoints = this.state.map.points;
         const road = this.state.road;
-
-        this.drawLine(reachedPoints, this.map.map_);
-        this.drawLoadPath(road, this.map.map_);
-
+        if (reachedPoints != undefined && road.start_point) {
+            this.drawLine(reachedPoints, this.map.map_);
+            this.drawLoadPath(road, this.map.map_);
+        }
     },
 
     drawLoadPath(road, map) {
