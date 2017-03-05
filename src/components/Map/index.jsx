@@ -42,6 +42,7 @@ let map = React.createClass({
             var truckPoint = null;
 
             let loadPoints = [];
+
             for (var i = 0; i < points.length; i++) {
                 var point = points[i];
                 if (point.photo) {
@@ -64,6 +65,8 @@ let map = React.createClass({
         const road = this.state.road;
         const points = this.state.map.points;
 
+        console.log(points);
+
         if (road && road.start_point && road.end_point) {
             
             return [
@@ -76,12 +79,14 @@ let map = React.createClass({
     },
 
     mapLoaded() {
-        const reachedPoints = this.state.map.points;
-        const road = this.state.road;
-        if (reachedPoints != undefined && road.start_point) {
+        if (this.map && this.map.map_) {
+            const reachedPoints = this.state.map.points;
+            const road = this.state.road;
+
             this.drawLine(reachedPoints, this.map.map_);
             this.drawLoadPath(road, this.map.map_);
         }
+
     },
 
     drawLoadPath(road, map) {
@@ -125,7 +130,8 @@ let map = React.createClass({
         const road = this.state.road;
 
         if (road && road.start_point && road.end_point) {
-            return [(road.start_point.lat + road.end_point.lat / 2), (road.start_point.lon + road.end_point.lon / 2)]
+            return [road.start_point.lat, road.start_point.lon];
+            // return [(road.start_point.lat + road.end_point.lat / 2), (road.start_point.lon + road.end_point.lon / 2)]
         } else {
             return [59.938043, 30.337157];
         }
@@ -144,15 +150,15 @@ let map = React.createClass({
 
         return (
             <div className="frameGoogleMap">
-                <GoogleMap
-                    yesIWantToUseGoogleMapApiInternals = {true}
-                    onGoogleApiLoaded  = {this.mapLoaded}
-                    ref ={(map) => { this.map = map; }}
+                {this.state.road ? <GoogleMap
+                    yesIWantToUseGoogleMapApiInternals={true}
+                    onGoogleApiLoaded={this.mapLoaded}
+                    ref={(map) => { this.map = map; }}
                     center={center}
-                    zoom={9}>
+                    zoom={13}>
                     {loadsPoint}
                     {road}
-                </GoogleMap>
+                </GoogleMap> : null}
             </div>);
     },
 });

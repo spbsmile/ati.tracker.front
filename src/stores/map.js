@@ -1,6 +1,8 @@
 import * as constants from 'app/constants';
 import Fluxxor from 'fluxxor';
 
+var maxPoint = 1;
+
 let map = Fluxxor.createStore({
     initialize: function () {
         this.state = {};
@@ -10,7 +12,14 @@ let map = Fluxxor.createStore({
     },
 
     setLoadPoints: function (points){
-         this.setProps({ 'points': points});
+        var sortedPoints = points.sort(function(a, b){
+            return a.time < b.time;
+        });
+
+        var limitedPoints = sortedPoints.slice(0, maxPoint);
+        maxPoint++;
+
+         this.setProps({ 'points': limitedPoints});
     },
 
     setProps(obj) {
