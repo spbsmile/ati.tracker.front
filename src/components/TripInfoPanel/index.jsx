@@ -13,6 +13,11 @@ let tripInfoPanel = React.createClass({
         PureRenderMixin],
 
     getInitialState: function () {
+
+        setInterval(function () {
+            this.getFlux().actions.road.initial();
+        }, 60000);        
+
         return {};
     },
 
