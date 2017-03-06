@@ -8,6 +8,18 @@ import Map from './components/Map';
 
 import styles from './styles.css';
 
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 const App = React.createClass({
 
     mixins: [FluxMixin,
@@ -35,7 +47,8 @@ const App = React.createClass({
     },
 
   render() {
-    
+    var loadId = getParameterByName('loadId', window.location.search);
+    console.log(loadId);
     return (
       <div className="app-container">
         <div className='header'>
@@ -43,7 +56,7 @@ const App = React.createClass({
 
           <span className='balance'>{this.showBalance()}</span>
         </div>
-        <Map>
+        <Map loadId={loadId}>
           
         </Map>
       </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Fluxxor from 'fluxxor';
 let FluxMixin = Fluxxor.FluxMixin(React);
 let storeWatch = Fluxxor.StoreWatchMixin;
@@ -17,13 +17,19 @@ let map = React.createClass({
         storeWatch('map', 'road'),
         PureRenderMixin],
 
+    propTypes: {
+        text: PropTypes.string,
+        style: PropTypes.string,
+        url: PropTypes.string
+    },
+
     getInitialState: function () {
         var flux = this.getFlux();
-        flux.actions.load.getReachedPoints();
-        flux.actions.road.initial();
+        flux.actions.load.getReachedPoints(this.props.loadId);
+        flux.actions.road.initial(this.props.loadId);
 
         setInterval(function () {
-            flux.actions.load.getReachedPoints();
+            flux.actions.load.getReachedPoints(this.props.loadId);
         }, 2000);
 
         return {};
@@ -135,6 +141,7 @@ let map = React.createClass({
     },
 
     render: function () {
+        
         const road = this.showRoadBound();
 
         if (this.map && this.map.map_) {

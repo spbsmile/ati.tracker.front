@@ -5,8 +5,9 @@ import * as settings from './settings';
 export default function methods(settings) {
     return {
         load: {
-            getReachedPoints: function () {
-                clients.Load.getPoints("http://ati.prog-pc32:9999/getPoints/" + constants.loadId, {
+            getReachedPoints: function (param) {
+                var loadRequest = param ? param : constants.loadId;
+                clients.Load.getPoints("http://ati.prog-pc32:9999/getPoints/" + loadRequest, {
                     success: (e) => {
                         this.dispatch(constants.LOAD_PATH_LOADED, e);
                     },
@@ -15,8 +16,9 @@ export default function methods(settings) {
             },
         },
         road:{
-            initial: function(){
-                clients.Road.start('http://ati.prog-pc32:9999/getRide/' + constants.loadId,{
+            initial: function(param){
+                var loadRequest = param ? param : constants.loadId;
+                clients.Road.start('http://ati.prog-pc32:9999/getRide/' + loadRequest,{
                     success: (e) => {
 
                         if(e && e != undefined && e.status == "finished"){
