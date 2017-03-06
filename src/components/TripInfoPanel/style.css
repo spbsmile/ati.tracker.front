@@ -71,9 +71,9 @@
 
 .widget_status_can_see .btn{
     margin-top: 15px;
-    margin-left: 45px;
-    width: 108px;
-    height: 28.2px;
+    margin-left: 25px;
+    width: 138px;
+    height: 34.2px;
     border-radius: 20px;
     background-color: #478cc8 !important;
 }
@@ -81,7 +81,7 @@
 .widget_status_can_see .title_widget{
     float: left;
     margin-top: 6px;
-    margin-left: 6px;
+    margin-left: 14px;
     width: 119.95px;
     height: 20.8px;
     font-family: Roboto;
@@ -114,11 +114,16 @@
 }
 
 .widget_status_can_see .btn .title{
+
+    margin: 0;
+    padding: 0;
+    margin-right: 45px;
+
   cursor: pointer;
   width: 53.3px; 
   height: 8.4px; 
   font-family: Lato;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
