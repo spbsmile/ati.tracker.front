@@ -132,9 +132,11 @@ let map = React.createClass({
 
     getCenter() {
         const road = this.state.road;
-
+        if (road && road.start_point) {
+            console.log(road.start_point.lat, road.start_point.lon);
+        }
         if (road && road.start_point && road.end_point) {
-            return [road.start_point.lat, road.start_point.lon];
+            return [(road.start_point.lat + road.end_point.lat) / 2, (road.start_point.lon + road.end_point.lon) / 2];
         } else {
             return [59.938043, 30.337157];
         }
@@ -148,9 +150,11 @@ let map = React.createClass({
             this.mapLoaded();
         }
 
+        var readyToShow = (this.state.road && this.state.road.start_point);
+
         return (
             <div className="frameGoogleMap">
-                {this.state.road ? <GoogleMap
+                {readyToShow ? <GoogleMap
                     yesIWantToUseGoogleMapApiInternals={true}
                     onGoogleApiLoaded={this.mapLoaded}
                     ref={(map) => { this.map = map; }}
