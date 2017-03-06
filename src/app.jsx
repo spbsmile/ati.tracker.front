@@ -13,7 +13,13 @@ const App = React.createClass({
   render() {
     return (
       <div className="app-container">
-        <div className='header'>ATI Tracker</div>
+        <div className='header'>
+          
+          <span className='title'> ATI Tracker</span>
+
+
+          <span className='balance'>Баланс   2 803 ат.</span>
+        </div>
         <Map>
           
         </Map>

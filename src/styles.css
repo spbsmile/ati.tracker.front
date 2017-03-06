@@ -5,3 +5,16 @@
     z-index: 5000;
     position: relative;
 }
+
+.balance{
+    float: right;
+
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.title{
+    margin-top: 20px;
+    display: inline-block;
+     margin-left: 40px;
+}
