@@ -29,13 +29,13 @@ export default function methods(settings) {
                 //  this.dispatch(constants.PHOTO_REQUEST, e);
             },
             reqPhoto:function(){
-                 this.dispatch(constants.PHOTO_REQUEST);
-                //  clients.Photo.reqPhoto('http://ati.prog-pc32:9999/requestPhoto/'+ constants.loadId,{
-                //     success: (e) => {
-                //         this.dispatch(constants.PHOTO_REQUEST, e);
-                //     },
-                //     error: () => this.dispatch(constants.PHOTO_REQUEST_FAILED),
-                // })
+                 //this.dispatch(constants.PHOTO_REQUEST);
+                 clients.Photo.reqPhoto('http://ati.prog-pc32:9999/requestPhoto/'+ constants.loadId,{
+                    success: () => {
+                        this.dispatch(constants.PHOTO_REQUEST);
+                    },
+                    error: () => this.dispatch(constants.PHOTO_REQUEST_FAILED),
+                })
             },
             responsePhoto(photoUrl){
                 this.dispatch(constants.PHOTO_RESPONSE, photoUrl);
