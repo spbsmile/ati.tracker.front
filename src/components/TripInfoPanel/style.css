@@ -129,26 +129,28 @@
 }
 
 .widget_status_end_left_part{
-  float: left;
-  width: 34.45px; 
-  height: 41.2px;
-  font-family: Roboto;
-  font-size: 7px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  text-align: left;
-  color: rgba(6, 21, 35, 0.8);
+     float: left;
+    width: 90px;
+    margin-top: 15px;
+    height: 91.2px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(6, 21, 35, 0.8);
 }
 
 .widget_status_end_right_part{
+  margin-top: 15px;
   float: left;
-  width: 107,25px;
+  width: 107.25px;
   height: 39px;
   font-family: Roboto;
-  font-size: 7px;
+  font-size: 13px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

@@ -18,6 +18,11 @@ export default function methods(settings) {
             initial: function(){
                 clients.Road.start('http://ati.prog-pc32:9999/getRide/' + constants.loadId,{
                     success: (e) => {
+
+                        if(e && e != undefined && e.status == "finished"){
+                            this.dispatch(constants.ROAD_FINISHED);
+                        }
+
                         this.dispatch(constants.START_ROAD_LOADED, e);
                     },
                     error: () => this.dispatch(constants.START_ROAD_FAILED),

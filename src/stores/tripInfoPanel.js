@@ -10,8 +10,13 @@ let tripInfoPanel = Fluxxor.createStore({
         
         this.bindActions(
             constants.PHOTO_REQUEST, this.setStatusWait,
-            constants.PHOTO_RESPONSE, this.setStatusCanSee
+            constants.PHOTO_RESPONSE, this.setStatusCanSee,
+            constants.ROAD_FINISHED, this.setStatusEnd
         );
+    },
+
+    setStatusEnd: function (){
+         this.setProps({ 'widget_photo_status': "end"});
     },
 
     setStatusCanSee: function (photoUrl){
