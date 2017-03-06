@@ -1,11 +1,11 @@
 .panel{
     position: absolute;
     left: 30px;
-    bottom: 15%;
+    bottom: 25%;
 
 
-    width: 408.2px;
-    height: 61.1px;
+    width: 608.2px;
+    height: 91.1px;
 
     border-radius: 1px;
     background-color: #ffffff;
@@ -13,22 +13,20 @@
 }
 
 .button{
-  width: 113.1px;
-  height: 27.3px;
-  border-radius: 20px;
-  background-color: #478cc8!important;
-  background-color: var(--blue);
-  cursor: pointer;
+  width: 133.1px;
+    height: 34.3px;
+    border-radius: 20px;
+    background-color: #478cc8 !important;
+    cursor: pointer;
 }
 
 .content{
-      float: left;
-      margin-left: 10px;
-    margin-top: 10px;
-    width: 191.75px;
-    height: 39px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 341.75px;
+  height: 79px;
   font-family: Roboto;
-  font-size: 9px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -43,17 +41,18 @@
 }
 
 .widget_status_1{
-  margin-right: 10px;
-  margin-top: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 154.15px;
+    height: 37.7px;
 }
 
 .widget_status_2 {
-  margin-right: 10px;
   margin-top: 10px;
-  width: 124.15px;
-  height: 37.7px;
+  width: 184.15px;
+  height: 91.1px;
   font-family: Roboto;
-  font-size: 9px;
+  font-size: 15px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -64,35 +63,36 @@
 }
 
 .widget_status_can_see{
-  width:  124.15px;
-  height: 61.1px;
+  width: 184.15px;
+  height: 91.1px;
   border-radius: 1px;
   background-color:rgba(251, 193, 50, 0.5) !important;
 }
 
 .widget_status_can_see .btn{
-  margin-left: 5px;
-  width: 78px;
-  height: 18.2px;
-  border-radius: 20px;
-  background-color: #478cc8 !important;
+    margin-top: 15px;
+    margin-left: 45px;
+    width: 108px;
+    height: 28.2px;
+    border-radius: 20px;
+    background-color: #478cc8 !important;
 }
 
 .widget_status_can_see .title_widget{
-  float: left;
+    float: left;
     margin-top: 6px;
     margin-left: 6px;
-  width: 79.95px;
-  height: 20.8px;
-  font-family: Roboto;
-  font-size: 8px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.14;
-  letter-spacing: normal;
-  text-align: left;
-  color: rgba(6, 21, 35, 0.8);
+    width: 119.95px;
+    height: 20.8px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(6, 21, 35, 0.8);
 }
 
 .widget_status_can_see .icon{
@@ -118,7 +118,7 @@
   width: 53.3px; 
   height: 8.4px; 
   font-family: Lato;
-  font-size: 5.5px;
+  font-size: 13.5px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -163,17 +163,16 @@
 }
 
 .textButton{
-  width: 113,1px;
-  height: 12.35px;
-  font-family: Lato;
-  font-size: 8px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.58;
-  letter-spacing: 0.4px;
-  text-align: center;
-  color: #ffffff!important;
+     height: 12.35px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.58;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff !important;
 }
 
 .right{
@@ -181,19 +180,19 @@
 }
 
 .costTitle{
-        font-size: 8px;
-    margin-left: 23px;
+    font-size: 12px;
+    margin-left: 15px;
     margin-top: 4px;
-     width: 70px;
-  height: 13px;
-  font-family: Roboto;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.67;
-  letter-spacing: normal;
-  text-align: left;
-  color: #8c969d;
+    width: 110px;
+    height: 14px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8c969d;
 }
 
 .icon{
@@ -204,8 +203,8 @@
     float: left;
          margin-left: 10px;
     margin-top: 10px;
-  width: 20.8px; 
-  height: 17.57px; 
+  width: 30.8px; 
+  height: 27.57px; 
   object-fit: contain;
   background-color: #e6ba4d !important;
 }
