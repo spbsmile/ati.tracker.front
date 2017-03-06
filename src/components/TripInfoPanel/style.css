@@ -2,16 +2,19 @@
     position: absolute;
     left: 30px;
     bottom: 15%;
-    width: 314px;
-    height: 47px;
+
+
+    width: 408.2px;
+    height: 61.1px;
+
     border-radius: 1px;
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .button{
-  width: 87px;
-  height: 21px;
+  width: 113.1px;
+  height: 27.3px;
   border-radius: 20px;
   background-color: #478cc8!important;
   background-color: var(--blue);
@@ -22,10 +25,10 @@
       float: left;
       margin-left: 10px;
     margin-top: 10px;
-    width: 147.5px;
-    height: 30px;
+    width: 191.75px;
+    height: 39px;
   font-family: Roboto;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -47,8 +50,8 @@
 .widget_status_2 {
   margin-right: 10px;
   margin-top: 10px;
-  width: 95.5px;
-  height: 29px;
+  width: 124.15px;
+  height: 37.7px;
   font-family: Roboto;
   font-size: 7px;
   font-weight: normal;
@@ -58,31 +61,29 @@
   letter-spacing: normal;
   text-align: left;
   color: #8c969d;
-  color: var(--darkgray);
 }
 
 .widget_status_can_see{
-  width: 95.5px;
-  height: 47px;
+  width:  124.15px;
+  height: 61.1px;
   border-radius: 1px;
   background-color:rgba(251, 193, 50, 0.5) !important;
 }
 
 .widget_status_can_see .btn{
   margin-left: 5px;
-  width: 60px;
-  height: 14px;
+  width: 78px;
+  height: 18.2px;
   border-radius: 20px;
   background-color: #478cc8 !important;
-  background-color: var(--blue);
 }
 
 .widget_status_can_see .title_widget{
   float: left;
     margin-top: 6px;
     margin-left: 6px;
-   width: 61.5px;
-  height: 16px;
+  width: 79.95px;
+  height: 20.8px;
   font-family: Roboto;
   font-size: 7px;
   font-weight: bold;
@@ -98,8 +99,8 @@
       float: left;
     margin-left: 5px;
     margin-top: 6px;
-  width: 15px;
-  height: 14px;
+  width: 19.5px; 
+  height: 18.3px; 
   object-fit: contain;
   font-family: MaterialIcons;
   font-size: 15px;
@@ -114,8 +115,8 @@
 
 .widget_status_can_see .btn .title{
   cursor: pointer;
-  width: 41px;
-  height: 6.5px;
+  width: 53.3px; 
+  height: 8.4px; 
   font-family: Lato;
   font-size: 5.5px;
   font-weight: bold;
@@ -125,13 +126,12 @@
   letter-spacing: 0.3px;
   text-align: left;
   color: #ffffff !important;
-  color: var(--white);
 }
 
 .widget_status_end_left_part{
   float: left;
-  width: 26.5px;
-  height: 40px;
+  width: 34.45px; 
+  height: 41.2px;
   font-family: Roboto;
   font-size: 7px;
   font-weight: normal;
@@ -145,8 +145,8 @@
 
 .widget_status_end_right_part{
   float: left;
-  width: 82.5px;
-  height: 30px;
+  width: 107,25px;
+  height: 39px;
   font-family: Roboto;
   font-size: 7px;
   font-weight: normal;
@@ -163,10 +163,10 @@
 }
 
 .textButton{
-     width: 87px;
-  height: 9.5px;
+  width: 113,1px;
+  height: 12.35px;
   font-family: Lato;
-  font-size: 6px;
+  font-size: 8px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -174,7 +174,6 @@
   letter-spacing: 0.4px;
   text-align: center;
   color: #ffffff!important;
-  color: var(--white);
 }
 
 .right{
@@ -182,11 +181,12 @@
 }
 
 .costTitle{
-        margin-left: 20px;
-     width: 52.5px;
-  height: 10px;
+        font-size: 8px;
+    margin-left: 23px;
+    margin-top: 4px;
+     width: 70px;
+  height: 13px;
   font-family: Roboto;
-  font-size: 6px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -194,7 +194,6 @@
   letter-spacing: normal;
   text-align: left;
   color: #8c969d;
-  color: var(--darkgray);
 }
 
 .icon{
@@ -205,10 +204,9 @@
     float: left;
          margin-left: 10px;
     margin-top: 10px;
-  width: 16px;
-  height: 13.5px;
+  width: 20.8px; 
+  height: 17.57px; 
   object-fit: contain;
   background-color: #e6ba4d !important;
-  background-color: var(--orange);
 }
 
