@@ -28,8 +28,9 @@ let map = React.createClass({
         flux.actions.load.getReachedPoints(this.props.loadId);
         flux.actions.road.initial(this.props.loadId);
 
+        var loadId = this.props.loadId;
         setInterval(function () {
-            flux.actions.load.getReachedPoints(this.props.loadId);
+            flux.actions.load.getReachedPoints(loadId);
         }, 2000);
 
         return {};
