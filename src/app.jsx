@@ -52,7 +52,7 @@ const App = React.createClass({
     return (
       <div className="app-container">
         <div className='header'>
-          <span className='title'> ATI Tracker</span>
+          <span className='title'></span>
 
           <span className='balance'>{this.showBalance()}</span>
         </div>
