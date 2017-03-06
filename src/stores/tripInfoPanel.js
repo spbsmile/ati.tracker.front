@@ -6,6 +6,7 @@ let tripInfoPanel = Fluxxor.createStore({
     initialize: function () {
         this.state = {};
         this.setProps({ 'widget_photo_status': "initial"});
+         this.setProps({ 'balance': "2 803"});
         
         this.bindActions(
             constants.PHOTO_REQUEST, this.setStatusWait,
@@ -14,11 +15,11 @@ let tripInfoPanel = Fluxxor.createStore({
     },
 
     setStatusCanSee: function (){
-        this.setProps({ 'widget_photo_status': "can_see_photo"});
+        this.setProps({ 'widget_photo_status': "can_see_photo", "balance":"2703"});
     },
 
     setStatusWait: function (){
-        this.setProps({ 'widget_photo_status': "wait_photo_response"});
+        this.setProps({ 'widget_photo_status': "wait_photo_response", "balance":"2 703"});
     },
 
     setProps(obj) {
