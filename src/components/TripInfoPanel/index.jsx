@@ -18,8 +18,9 @@ let tripInfoPanel = React.createClass({
 
     getInitialState: function () {
 
+        var flux = this.getFlux();
         setInterval(function () {
-            this.getFlux().actions.road.initial();
+            flux.actions.road.initial();
         }, 60000);        
 
         return {};
