@@ -9,6 +9,19 @@ export default function methods(settings) {
                 var loadRequest = param ? param : constants.loadId;
                 clients.Load.getPoints("http://ati.prog-pc32:9999/getPoints/" + loadRequest, {
                     success: (e) => {
+                        var lastPhotoPoint = null;
+                        for (var pointId in e) {
+                            if (e.hasOwnProperty(pointId)) {
+                                var point = e[pointId];
+                                if (point && point.photo) {
+                                    lastPhotoPoint = point;
+                                    console.log('Photo point found!');
+                                }
+                            }
+                        }
+                        if (lastPhotoPoint) {
+                            this.dispatch(constants.PHOTO_RESPONSE, lastPhotoPoint.photo);
+                        }
                         this.dispatch(constants.LOAD_PATH_LOADED, e);
                     },
                     error: () => this.dispatch(constants.LOAD_PATH_FAILED),

@@ -9,7 +9,7 @@ let storeWatch = Fluxxor.StoreWatchMixin;
 let tripInfoPanel = React.createClass({
 
     mixins: [FluxMixin,
-        storeWatch('tripInfoPanel'),
+        storeWatch('tripInfoPanel', 'map'),
         PureRenderMixin],
 
     propTypes: {
@@ -19,15 +19,21 @@ let tripInfoPanel = React.createClass({
     getInitialState: function () {
 
         var flux = this.getFlux();
+        var loadId = this.props.loadId;
         setInterval(function () {
-            flux.actions.road.initial();
+            flux.actions.road.initial(loadId);
         }, 60000);        
 
         return {};
     },
 
     getStateFromFlux: function () {
-        return this.getFlux().store('tripInfoPanel').getState();
+        const map = this.getFlux().store('map').getState();
+        const tripInfoPanel = this.getFlux().store('tripInfoPanel').getState();
+        return {
+            'map': map,
+            'tripInfoPanel' : tripInfoPanel
+        };
     },
 
     requestPhotoClick() {
@@ -35,9 +41,10 @@ let tripInfoPanel = React.createClass({
     },
 
     openPhotoClick(){
-        const url = this.state.photoUrl;
-        if(url != undefined){
-            window.open(url);
+        const url = this.state.tripInfoPanel.photoUrl;
+     
+        if (url){
+            window.open("http://ec43419d.ngrok.io" + url);
         }
     },
 
@@ -50,7 +57,7 @@ let tripInfoPanel = React.createClass({
     },
 
     rightWidget() {
-        const widget_status = this.state.widget_photo_status;
+        const widget_status = this.state.tripInfoPanel.widget_photo_status;
         if (widget_status == 'initial') {
             return <div className='widget_status_1'>
                 <button className='button' onClick={this.requestPhotoClick} >
