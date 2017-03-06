@@ -38,7 +38,8 @@ export default function methods(settings) {
                 })
             },
             responsePhoto(photoUrl){
-                this.dispatch(constants.PHOTO_RESPONSE, photoUrl);
+                var url = "http://ec43419d.ngrok.io" + photoUrl;
+                this.dispatch(constants.PHOTO_RESPONSE, url);
             }
         }
     }
