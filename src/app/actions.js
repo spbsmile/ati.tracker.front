@@ -35,9 +35,9 @@ export default function methods(settings) {
             initial: function(){
                 //  this.dispatch(constants.PHOTO_REQUEST, e);
             },
-            reqPhoto:function(){
-                 //this.dispatch(constants.PHOTO_REQUEST);
-                 clients.Photo.reqPhoto('http://ati.prog-pc32:9999/requestPhoto/'+ constants.loadId,{
+            reqPhoto:function(param){
+                var loadRequest = param ? param : constants.loadId;
+                 clients.Photo.reqPhoto('http://ati.prog-pc32:9999/requestPhoto/'+ loadRequest,{
                     success: () => {
                         this.dispatch(constants.PHOTO_REQUEST);
                     },

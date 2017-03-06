@@ -12,6 +12,10 @@ let tripInfoPanel = React.createClass({
         storeWatch('tripInfoPanel'),
         PureRenderMixin],
 
+    propTypes: {
+        loadId: PropTypes.string,
+    },        
+
     getInitialState: function () {
 
         setInterval(function () {
@@ -26,7 +30,7 @@ let tripInfoPanel = React.createClass({
     },
 
     requestPhotoClick() {
-        this.getFlux().actions.tripInfoPanel.reqPhoto();
+        this.getFlux().actions.tripInfoPanel.reqPhoto(this.props.loadId);
     },
 
     openPhotoClick(){

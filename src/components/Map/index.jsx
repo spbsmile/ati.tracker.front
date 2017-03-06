@@ -18,9 +18,7 @@ let map = React.createClass({
         PureRenderMixin],
 
     propTypes: {
-        text: PropTypes.string,
-        style: PropTypes.string,
-        url: PropTypes.string
+        loadId: PropTypes.string,
     },
 
     getInitialState: function () {
@@ -164,7 +162,7 @@ let map = React.createClass({
                     {this.getWrapReachedPoints()}
                     {road}
                 </GoogleMap> : null}
-                <TripInfoPanel/>
+                <TripInfoPanel loadId={this.props.loadId}/>
             </div>);
     },
 });
