@@ -14,8 +14,8 @@ let tripInfoPanel = Fluxxor.createStore({
         );
     },
 
-    setStatusCanSee: function (){
-        this.setProps({ 'widget_photo_status': "can_see_photo", "balance":"2703"});
+    setStatusCanSee: function (photoUrl){
+        this.setProps({ 'widget_photo_status': "can_see_photo", "photoUrl":photoUrl});
     },
 
     setStatusWait: function (){

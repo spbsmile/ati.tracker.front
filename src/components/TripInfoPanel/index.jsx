@@ -25,7 +25,10 @@ let tripInfoPanel = React.createClass({
     },
 
     openPhotoClick(){
-        console.log("hello open photo");
+        const url = this.state.photoUrl;
+        if(url! = undefined){
+            window.open(url);
+        }
     },
 
     showContent() {

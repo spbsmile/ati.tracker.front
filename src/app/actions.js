@@ -37,8 +37,8 @@ export default function methods(settings) {
                 //     error: () => this.dispatch(constants.PHOTO_REQUEST_FAILED),
                 // })
             },
-            responsePhoto:function(){
-                this.dispatch(constants.PHOTO_RESPONSE);
+            responsePhoto(photoUrl){
+                this.dispatch(constants.PHOTO_RESPONSE, photoUrl);
             }
         }
     }
